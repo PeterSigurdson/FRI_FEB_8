@@ -9,4 +9,17 @@ namespace FRI_FEB_8
             Console.WriteLine("Hello World!");
         }
     }
+
+    class Node
+    {
+        public Node() { }
+        Node floor;
+        Node elevatorUp;
+        string FloorNumber;
+    }  
+    
+    class Evelator
+    {
+
+    }
 }
