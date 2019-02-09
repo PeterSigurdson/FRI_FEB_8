@@ -21,11 +21,11 @@ namespace FRI_FEB_8
 
     class Department
     {
-        public Department(string dept_name)
-        {
+        public Department(string dept_name) {
             DepartmentDescription = dept_name;
         }
-        public Department aDepartment;
+        public Department nextDepartment;
+        public Department previousDepartment;
         public string DepartmentDescription;
     }
     
@@ -33,7 +33,11 @@ namespace FRI_FEB_8
     {
         public void InitializeDepartments()
         {
-           Department Kitchenware = new Department("Kitchenware");
+            Department Books = new Department("Books");
+            Department Kitchenware = new Department("Kitchenware");
+
+            Kitchenware.nextDepartment = Books;
+            Kitchenware.previousDepartment = FirstFloor;
            Department Books = new Department("Books");
 
         }
@@ -42,11 +46,11 @@ namespace FRI_FEB_8
 
     class Elevator
     {
-        Node Head;
-        Node FirstFloor;
-        Node SecondFloor;
-        Node ThirdFloor;
-        Node FourthFloor;
+        public static Node Head;
+        public static  Node FirstFloor;
+        public static  Node SecondFloor;
+        public static  Node ThirdFloor;
+        public static  Node FourthFloor;
         
         public void setup()
         {
