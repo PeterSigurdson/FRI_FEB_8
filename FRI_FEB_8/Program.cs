@@ -6,9 +6,13 @@ namespace FRI_FEB_8
     {
         static void Main(string[] args)
         {
-            Elevator e = new Elevator();
-            e.setup();
-            e.TraverseList();
+            //Elevator e = new Elevator();
+            //e.setup();
+            //e.TraverseList();
+
+            BubbleSort b = new BubbleSort();
+            b.run();
+            Console.ReadLine();
         }
     }
 
@@ -36,9 +40,9 @@ namespace FRI_FEB_8
             Department Books = new Department("Books");
             Department Kitchenware = new Department("Kitchenware");
 
-            Kitchenware.nextDepartment = Books;
-            Kitchenware.previousDepartment = FirstFloor;
-           Department Books = new Department("Books");
+           // Kitchenware.nextDepartment = Books;
+           // Kitchenware.previousDepartment = FirstFloor;
+           //Department Books = new Department("Books");
 
         }
 
@@ -84,5 +88,41 @@ namespace FRI_FEB_8
             }
 
         }
+    }
+
+    class BubbleSort
+    {
+        public void run()
+        {
+            int[] array = new int[5] { 9, 11, 3, 5, 17 };
+            int temp;
+           
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 0; j < array.Length-1; j++)
+                {
+                    temp = 0;
+                    if (array[j] > array[j+1])
+                    {
+                        temp = array[j];
+                        array[i] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+                    
+                }
+            }
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+               // Console.WriteLine("the i-th value is {0} ", array[i]);
+
+            }
+
+
+           // Console.WriteLine("C'est Fini");
+
+        
     }
 }
