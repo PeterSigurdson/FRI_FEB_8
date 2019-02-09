@@ -7,7 +7,7 @@ namespace FRI_FEB_8
         static void Main(string[] args)
         {
             Elevator e = new Elevator();
-            e.run();
+            e.setup();
         }
     }
 
@@ -21,12 +21,13 @@ namespace FRI_FEB_8
     
     class Elevator
     {
+        Node Head;
         Node FirstFloor;
         Node SecondFloor;
         Node ThirdFloor;
         Node FourthFloor;
         
-        public void run()
+        public void setup()
         {
             FirstFloor = new Node();
             SecondFloor = new Node();
@@ -41,6 +42,15 @@ namespace FRI_FEB_8
             ThirdFloor.elevatorUp = FourthFloor;
             FourthFloor.FloorNumber = "Fourth Floor";
             FourthFloor.elevatorUp = null;
+        }
+
+        public void TraverseList()
+        {
+            while (true)
+            {
+
+            }
+
         }
     }
 }
